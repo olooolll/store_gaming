@@ -1,5 +1,9 @@
-/* CARD DO PRODUTO */
+/* IMPORTANTE: fonte HQ */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* CARD */
 .produto {
+    position: relative;
     display: flex;
     flex-direction: column;
 
@@ -18,9 +22,8 @@
     box-shadow: 10px 10px 0 #000;
 }
 
-/* CABEÇALHO (IMAGEM) */
+/* CABEÇALHO */
 .produto .cabecalho {
-    background: linear-gradient(135deg, #FFD23F, #FF6F61);
     height: 150px;
 
     display: flex;
@@ -47,67 +50,74 @@
     max-width: 80%;
     max-height: 100%;
     z-index: 1;
+    transition: 0.2s;
+}
+
+/* ZOOM NO HOVER */
+.produto:hover img {
+    transform: scale(1.1);
 }
 
 /* RODAPÉ */
 .produto .rodape {
     padding: 15px;
-    background: #fff;
 
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
 }
 
-/* TEXTOS */
-.produto h4 {
+/* NOME */
+.nome {
     margin: 0;
     font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
     text-shadow: 1px 1px 0 #000;
 }
 
-/* SEÇÃO (tipo categoria) */
-.produto .rodape h4:nth-child(1) {
-    font-size: 1rem;
-    color: #ff0000;
+/* TAGS (seção + marca) */
+.info {
+    display: flex;
+    gap: 6px;
 }
 
-/* MARCA */
-.produto .rodape h4:nth-child(2) {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* NOME DO PRODUTO */
-.produto .rodape h4:nth-child(3) {
-    font-size: 1.2rem;
-    color: #000;
+.tag {
+    padding: 4px 8px;
+    border: 2px solid #000;
+    background: #FFD23F;
+    font-family: 'Bangers', cursive;
+    font-size: 0.75rem;
+    box-shadow: 2px 2px 0 #000;
 }
 
 /* PREÇO */
-.produto .rodape h4:nth-child(4) {
-    font-size: 1.3rem;
+.preco {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
     color: #2ecc71;
     font-weight: bold;
+    text-shadow: 2px 2px 0 #000;
 }
 
-/* BADGE (tipo promoção) */
-.produto::after {
-    content: "🔥 OFERTA";
-    position: absolute;
-    top: 10px;
-    left: -10px;
-
-    background: yellow;
-    color: #000;
-
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    font-family: 'Bangers', cursive;
-
+/* CONDIÇÃO */
+.condicao {
+    display: inline-block;
+    padding: 6px 10px;
     border: 3px solid #000;
-    transform: rotate(-15deg);
-
+    background: #fff;
+    font-family: 'Bangers', cursive;
+    font-size: 0.9rem;
     box-shadow: 3px 3px 0 #000;
+    width: fit-content;
+}
+
+/* VARIAÇÕES */
+.condicao.novo {
+    background: #4caf50;
+    color: #fff;
+}
+
+.condicao.usado {
+    background: #ff9800;
 }

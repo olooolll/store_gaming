@@ -1,17 +1,29 @@
 /* IMPORTANTE: fonte estilo HQ */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
-/* BOTÃO PADRÃO */
-button {
+.radio-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* ESCONDE o radio padrão */
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+/* LABEL vira o "botão HQ" */
+.radio-container label {
     font-family: 'Bangers', cursive;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 1px;
 
-    padding: 12px 20px;
+    padding: 10px 16px;
     border: 4px solid #000;
     cursor: pointer;
+    background: linear-gradient(135deg, #FF6F61, #FFD23F);
 
-    background: linear-gradient(135deg, #FFD23F, #FF6F61);
     color: #000;
 
     box-shadow: 4px 4px 0 #000;
@@ -20,8 +32,8 @@ button {
     position: relative;
 }
 
-/* EFEITO HQ (pontilhado) */
-button::before {
+/* EFEITO pontilhado */
+.radio-container label::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -32,14 +44,20 @@ button::before {
 }
 
 /* HOVER */
-button:hover {
+.radio-container label:hover {
     transform: translate(-2px, -2px) rotate(-1deg);
     box-shadow: 6px 6px 0 #000;
 }
 
 /* CLICK */
-button:active {
+.radio-container label:active {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #000;
 }
 
+/* SELECIONADO */
+.radio-container input[type="radio"]:checked + label {
+    background: linear-gradient(135deg, #1F4E79, #6FFFE9);
+    box-shadow: 2px 2px 0 #000;
+    transform: translate(2px, 2px);
+}

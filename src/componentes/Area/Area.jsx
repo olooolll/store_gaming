@@ -3,16 +3,17 @@ import Produtos from "../Produtos/Produtos.jsx";
 import "./Area.css";
 
 function Area(props){
+
     if (props.produtos.length > 0) {
         return (
             <section className="area">
                 <div className="area-grid">
-                    {props.produtos.map(produto => (
+                    {props.produtos.map((produto,index) => (
                         <div
-                            key={produto.nome}
+                            key={index}
                             className={`area-card ${produto.secao?.toLowerCase() || ""}`}
                         >
-                            <Produtos produto={produto} />
+                            <Produtos produto={produto} corPrincipal={props.corPrincipal} corSecundaria={props.corSecundaria} imagem={props.imagem}/>
                         </div>
                     ))}
                 </div>

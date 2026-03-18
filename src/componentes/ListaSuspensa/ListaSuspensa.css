@@ -27,22 +27,12 @@
     border: 4px solid #000;
     outline: none;
 
-    background: linear-gradient(135deg, #fff, #f0f0f0);
     color: #000;
 
     box-shadow: 4px 4px 0 #000;
 
     cursor: pointer;
     transition: all 0.15s ease;
-
-    /* seta customizada */
-    background-image: linear-gradient(135deg, #fff, #f0f0f0),
-    url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: auto, 20px;
-
-    padding-right: 40px;
 }
 
 /* HOVER */

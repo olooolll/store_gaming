@@ -22,11 +22,11 @@ function App() {
     ];
 
     const marcas = [
-        {"nome": "HP"},
-        {"nome": "Positivo"},
-        {"nome": "Dell"},
-        {"nome": "ASUS"},
-        {"nome": "Xing Ling"}
+        {"nome": "HP", "url": "https://login3.id.hp.com/login3/static/media/hP.03f9c77.05f6028de6b55f68631d3546325b60e9.svg"},
+        {"nome": "Positivo", "url": "https://www.meupositivo.com.br/assets/img/positivo-logo-branca.png?v=1.0"},
+        {"nome": "Dell", "url": "https://cdn.worldvectorlogo.com/logos/dell-2.svg"},
+        {"nome": "ASUS", "url": "https://www.freepnglogos.com/uploads/logo-asus-png/asus-logo-hd-photo-15.png"},
+        {"nome": "Xing Ling", "url": "https://guia.folhadecampolargo.com.br/upload/anuncios/galerias/af06a78a690006c6eb596fae9bfa6543.jpg"}
     ];
 
     return (
@@ -43,9 +43,11 @@ function App() {
                     return (<Area
                         key={secao.nome}
                         nome={secao.nome}
-                        corPrimaria={secao.corPrimaria}
+                        corPrincipal={secao.corPrincipal}
                         corSecundaria={secao.corSecundaria}
-                        produtos={produtos.filter(produto => produto.secao === secao.nome)}
+                        produtos={
+                            produtos.filter(produto => produto.secao === secao.nome)
+                        }
                     />);
                 }
             )}
