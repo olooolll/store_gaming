@@ -1,15 +1,25 @@
 import React from "react";
 
+function ListaSuspensa({ label, valor, itens, aoAlterado }) {
+    const aoEscolhido = (evento) => {
+        aoAlterado(evento.target.value);
+    };
 
-function ListaSuspensa(props) {
     return (
         <div>
-            <label>{props.label}</label>
-            <select>
-                {props.itens.map(item => <option key={item}>{item}</option>)}
+            <label>{label}</label>
+            <select value={valor || ""} onChange={aoEscolhido}>
+                <option value="" disabled>
+                    Selecione...
+                </option>
+
+                {itens.map(item => (
+                    <option key={item} value={item}>
+                        {item}
+                    </option>
+                ))}
             </select>
         </div>
-
     );
 }
 
