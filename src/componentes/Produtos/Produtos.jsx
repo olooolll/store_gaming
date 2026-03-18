@@ -1,18 +1,20 @@
 import React from "react";
+import "./Produtos.css";
 
 function Produtos(props) {
-    console.log(props);
+    const { produto } = props;
+
     return (
         <div className="produto">
             <div className="cabecalho">
-                <img src="Não tem" alt="produto"/>
+                <img src={produto.imagem || "/img/placeholder.png"} alt={produto.nome}/>
             </div>
 
             <div className="rodape">
-                <h4>{props.produto.secao}</h4>
-                <h4>{props.produto.marca}</h4>
-                <h4>{props.produto.nome}</h4>
-                <h4>{props.produto.preco}</h4>
+                <h4>{produto.secao}</h4>
+                <h4>{produto.marca}</h4>
+                <h4>{produto.nome}</h4>
+                <h4>R$ {produto.preco}</h4>
             </div>
         </div>
     );

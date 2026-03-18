@@ -1,5 +1,53 @@
-.banner img{
-    margin: 0 10%;
-    width: 80%;
-    height: 500px;
+/* CONTAINER */
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111;
+    padding: 20px 0;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* EFEITO HQ (pontilhado no fundo) */
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: radial-gradient(#000 1px, transparent 1px);
+    background-size: 10px 10px;
+    opacity: 0.2;
+
+    pointer-events: none;
+}
+
+/* IMAGEM */
+.banner img {
+    width: 90%;
+    max-width: 1200px;
+
+    border: 6px solid #000;
+    box-shadow: 10px 10px 0 #000;
+
+    transition: all 0.2s ease;
+
+    /* deixa mais vibrante */
+    filter: contrast(1.1) saturate(1.2);
+}
+
+/* HOVER (efeito gamer) */
+.banner img:hover {
+    transform: scale(1.02) rotate(-0.5deg);
+    box-shadow: 14px 14px 0 #000;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .banner img {
+        width: 95%;
+    }
 }

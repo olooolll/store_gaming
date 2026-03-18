@@ -1,0 +1,113 @@
+/* CARD DO PRODUTO */
+.produto {
+    display: flex;
+    flex-direction: column;
+
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
+
+    background: #fff;
+    overflow: hidden;
+
+    transition: all 0.2s ease;
+}
+
+/* HOVER */
+.produto:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 10px 10px 0 #000;
+}
+
+/* CABEÇALHO (IMAGEM) */
+.produto .cabecalho {
+    background: linear-gradient(135deg, #FFD23F, #FF6F61);
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 4px solid #000;
+    position: relative;
+}
+
+/* TEXTURA HQ */
+.produto .cabecalho::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: radial-gradient(#000 1px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0.2;
+}
+
+/* IMAGEM */
+.produto img {
+    max-width: 80%;
+    max-height: 100%;
+    z-index: 1;
+}
+
+/* RODAPÉ */
+.produto .rodape {
+    padding: 15px;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* TEXTOS */
+.produto h4 {
+    margin: 0;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* SEÇÃO (tipo categoria) */
+.produto .rodape h4:nth-child(1) {
+    font-size: 1rem;
+    color: #ff0000;
+}
+
+/* MARCA */
+.produto .rodape h4:nth-child(2) {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* NOME DO PRODUTO */
+.produto .rodape h4:nth-child(3) {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+/* PREÇO */
+.produto .rodape h4:nth-child(4) {
+    font-size: 1.3rem;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+/* BADGE (tipo promoção) */
+.produto::after {
+    content: "🔥 OFERTA";
+    position: absolute;
+    top: 10px;
+    left: -10px;
+
+    background: yellow;
+    color: #000;
+
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-family: 'Bangers', cursive;
+
+    border: 3px solid #000;
+    transform: rotate(-15deg);
+
+    box-shadow: 3px 3px 0 #000;
+}

@@ -1,0 +1,77 @@
+/* SEÇÃO (FUNDO GERAL) */
+section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #111;
+}
+
+/* FORMULÁRIO */
+form {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 30px;
+    border: 5px solid #000;
+
+    background: linear-gradient(135deg, #ffcc00, #ff3300);
+    box-shadow: 10px 10px 0 #000;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TEXTURA HQ (pontilhado) */
+form::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: radial-gradient(#000 1px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0.2;
+
+    pointer-events: none;
+
+}
+
+/* TÍTULO DO FORM */
+form::after {
+    content: "CADASTRO";
+    position: absolute;
+    top: -20px;
+    left: 20px;
+
+    background: #000;
+    color: #FFD23F;
+
+    padding: 5px 15px;
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+
+    border: 3px solid #000;
+    box-shadow: 3px 3px 0 #000;
+}
+
+/* ANIMAÇÃO AO PASSAR O MOUSE */
+form:hover {
+    transform: rotate(-0.5deg) scale(1.01);
+    transition: 0.2s;
+}
+
+/* BOTÃO DENTRO DO FORM */
+form button {
+    margin-top: 10px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+}

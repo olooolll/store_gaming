@@ -1,8 +1,9 @@
 import React from "react";
+import "./Botoes.css"
 
 function Botao(props) {
     return (
-        <button>
+        <button className={props.className}>
             {props.children}
         </button>
     );
@@ -10,10 +11,13 @@ function Botao(props) {
 
 function Radio(props){
     return(
-        <div>
-            {props.itens.map(item => <button type="radio">{item}</button> )}
+        <div className="radio-group">
+            {props.itens.map((item, i) => (
+                <button key={i}>
+                    {item}
+                </button>
+            ))}
         </div>
-
     );
 }
 
