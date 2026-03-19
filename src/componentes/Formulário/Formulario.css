@@ -39,11 +39,6 @@ form::before {
 
 }
 
-/* ANIMAÇÃO AO PASSAR O MOUSE */
-form:hover {
-    transform: rotate(-0.5deg) scale(1.01);
-    transition: 0.2s;
-}
 
 /* BOTÃO DENTRO DO FORM */
 form button {

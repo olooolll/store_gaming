@@ -31,13 +31,17 @@ const Formulario = ({ secoes, marcas, aoProdutoCadastrado }) => {
 
     const aoSalvar = (e) => {
         e.preventDefault();
+        const preco = Number(form["preco"]);
         let flag = true;
+
+        if(preco <= 0 || isNaN(preco)) flag = false;
         for(const key in form){
-            if(form["nome"] === "") flag = false;
-            if(form["preco"] <= 0) flag = false;
+            if(form[key] === "") flag = false;
         }
+
         if(flag) {
-            form["imagem"] = getURL(form.marca);
+            form.imagem = getURL(form.marca);
+            form.preco = preco.toFixed(2);
             aoProdutoCadastrado(form);
         } else {
             console.log("Não foi possivel realizar o cadastro");

@@ -52,26 +52,8 @@
     box-shadow: 2px 2px 0 #000;
 }
 
-/* VARIAÇÃO OPCIONAL POR CATEGORIA */
-.campo-texto.computadores input {
-    background: linear-gradient(135deg, #E6392F, #FF6F61);
-    color: #fff;
-}
-
-.campo-texto.acessorios input {
-    background: linear-gradient(135deg, #FFD23F, #FFF3B0);
-}
-
-.campo-texto.impressoras input {
-    background: linear-gradient(135deg, #1F4E79, #4F83CC);
-    color: #fff;
-}
-
-.campo-texto.games input {
-    background: linear-gradient(135deg, #2EC4B6, #6FFFE9);
-}
-
-.campo-texto.gadgets input {
-    background: linear-gradient(135deg, #3A3A3A, #8D99AE);
-    color: #fff;
+/* ANIMAÇÃO AO PASSAR O MOUSE */
+.campo-texto input:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
 }

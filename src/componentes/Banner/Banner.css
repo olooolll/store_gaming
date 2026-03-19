@@ -39,11 +39,6 @@
     filter: contrast(1.1) saturate(1.2);
 }
 
-/* HOVER (efeito gamer) */
-.banner img:hover {
-    transform: scale(1.02) rotate(-0.5deg);
-    box-shadow: 14px 14px 0 #000;
-}
 
 /* RESPONSIVO */
 @media (max-width: 768px) {

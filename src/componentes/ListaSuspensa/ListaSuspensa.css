@@ -56,27 +56,3 @@
 .lista-suspensa option {
     font-family: Arial, sans-serif; /* evita bug visual */
 }
-
-/* VARIAÇÕES POR CATEGORIA */
-.lista-suspensa.computadores select {
-    background: linear-gradient(135deg, #E6392F, #FF6F61);
-    color: #fff;
-}
-
-.lista-suspensa.acessorios select {
-    background: linear-gradient(135deg, #FFD23F, #FFF3B0);
-}
-
-.lista-suspensa.impressoras select {
-    background: linear-gradient(135deg, #1F4E79, #4F83CC);
-    color: #fff;
-}
-
-.lista-suspensa.games select {
-    background: linear-gradient(135deg, #2EC4B6, #6FFFE9);
-}
-
-.lista-suspensa.gadgets select {
-    background: linear-gradient(135deg, #3A3A3A, #8D99AE);
-    color: #fff;
-}
