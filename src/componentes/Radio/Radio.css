@@ -6,6 +6,7 @@
     gap: 12px;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-bottom: 6px;
 }
 
 /* ESCONDE o radio padrão */

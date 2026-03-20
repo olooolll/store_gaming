@@ -16,11 +16,11 @@
     transition: all 0.2s ease;
 }
 
-/* HOVER */
 .produto:hover {
     transform: scale(1.05) rotate(-1deg);
     box-shadow: 10px 10px 0 #000;
 }
+/* HOVER */
 
 /* CABEÇALHO */
 .produto .cabecalho {
