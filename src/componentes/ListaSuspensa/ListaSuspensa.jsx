@@ -1,8 +1,6 @@
 import React from "react";
 import "./ListaSuspensa.css"
 
-import "./ListaSuspensa.css";
-
 function ListaSuspensa({ label, valor, itens, aoAlterado, classe }) {
     const aoEscolhido = (evento) => {
         aoAlterado(evento.target.value);
@@ -11,7 +9,7 @@ function ListaSuspensa({ label, valor, itens, aoAlterado, classe }) {
     return (
         <div className={`lista-suspensa ${classe || ""}`}>
             <label>{label}</label>
-            <select value={valor || ""} onChange={aoEscolhido}>
+            <select value={valor} onChange={aoEscolhido}>
                 <option value="" disabled>
                     Selecione...
                 </option>

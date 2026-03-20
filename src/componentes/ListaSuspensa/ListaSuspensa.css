@@ -15,9 +15,9 @@
     letter-spacing: 1px;
 }
 
-/* SELECT */
+/* SELECT IGUAL AO INPUT */
 .lista-suspensa select {
-    appearance: none; /* remove estilo padrão */
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 
@@ -27,22 +27,27 @@
     border: 4px solid #000;
     outline: none;
 
+    background: linear-gradient(135deg, #fff, #f0f0f0);
     color: #000;
 
     box-shadow: 4px 4px 0 #000;
 
-    cursor: pointer;
     transition: all 0.15s ease;
+    position: relative;
+
+    cursor: pointer;
 }
 
-/* HOVER */
+/* HOVER (igual input) */
 .lista-suspensa select:hover {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 #000;
 }
 
-/* FOCUS */
+/* FOCO (igual input) */
 .lista-suspensa select:focus {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
     background: linear-gradient(135deg, #FFF3B0, #FFD23F);
 }
 
@@ -50,9 +55,4 @@
 .lista-suspensa select:active {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #000;
-}
-
-/* OPÇÕES */
-.lista-suspensa option {
-    font-family: Arial, sans-serif; /* evita bug visual */
 }
