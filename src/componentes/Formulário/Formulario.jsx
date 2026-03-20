@@ -33,7 +33,7 @@ const Formulario = ({ secoes, marcas, aoProdutoCadastrado }) => {
         }));
     };
 
-    const radios = ["Novo", "Usado"];
+    const opcoes = ["Novo", "Usado"];
 
     const aoSalvar = (e) => {
         e.preventDefault();
@@ -101,7 +101,8 @@ const Formulario = ({ secoes, marcas, aoProdutoCadastrado }) => {
                 />
 
                 <Radio
-                    radios={radios}
+                    itens={opcoes}
+                    nome="estado"
                     valor={form.radio}
                     aoAlterado={valor => aoMudanca("radio", valor)}
                 />

@@ -11,7 +11,8 @@
 .area-grid {
     width: 100%;
     max-width: 1200px;
-    background: linear-gradient(135deg, #FFD23F, #FF6F61);
+
+    background: linear-gradient(135deg, #c19043, #b1a189);
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

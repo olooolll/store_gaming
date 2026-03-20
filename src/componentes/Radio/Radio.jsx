@@ -2,7 +2,7 @@ import React from "react";
 import "./Radio.css";
 
 function Radio(props) {
-    const radios = props.radios;
+    const radios = props.itens;
 
     const aoDigitado = (evento) => {
         props.aoAlterado(evento.target.value);
@@ -15,7 +15,7 @@ function Radio(props) {
                     <React.Fragment key={radio}>
                         <input
                             type="radio"
-                            name="radios"
+                            name={props.nome}
                             value={radio}
                             id={radio}
                             checked={props.valor === radio}

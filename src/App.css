@@ -182,3 +182,6 @@
     border-right-color: var(--border);
   }
 }
+#root > div > div {
+  background-color: #111;
+}
