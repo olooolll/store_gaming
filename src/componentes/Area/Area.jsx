@@ -13,7 +13,7 @@ function Area(props){
                             key={index}
                             className={`area-card ${produto.secao?.toLowerCase() || ""}`}
                         >
-                            <Produtos produto={produto} corPrincipal={props.corPrincipal} corSecundaria={props.corSecundaria} imagem={props.imagem}/>
+                            <Produtos produto={produto}/>
                         </div>
                     ))}
                 </div>

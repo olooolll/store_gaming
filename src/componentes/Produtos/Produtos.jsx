@@ -1,10 +1,9 @@
 import React from "react";
 import "./Produtos.css";
 
-function Produtos({ produto, corPrincipal, corSecundaria }) {
-
+function Produtos({produto}) {
     const estilo = {
-        background: `linear-gradient(135deg, ${corPrincipal}, ${corSecundaria})`
+        background: `linear-gradient(135deg, ${produto.cores[0] || "FFF"}, ${produto.cores[1] || "FFF"})`
     };
 
     if (!produto) return null;

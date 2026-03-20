@@ -43,8 +43,6 @@ function App() {
                     return (<Area
                         key={secao.nome}
                         nome={secao.nome}
-                        corPrincipal={secao.corPrincipal}
-                        corSecundaria={secao.corSecundaria}
                         produtos={
                             produtos.filter(produto => produto.secao === secao.nome)
                         }

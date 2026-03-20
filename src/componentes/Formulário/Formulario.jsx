@@ -6,6 +6,12 @@ import Botao from "../Botoes/Botoes.jsx";
 import "./Formulario.css";
 
 const Formulario = ({ secoes, marcas, aoProdutoCadastrado }) => {
+    const getCores = (produtoSecao) => {
+        for(const secao of secoes){
+            if(secao.nome === produtoSecao) return [secao.corPrincipal, secao.corSecundaria];
+        }
+    }
+
     const getURL = (valor) => {
         for(let marca of marcas){
             if(marca.nome === valor) return marca.url;
@@ -31,6 +37,7 @@ const Formulario = ({ secoes, marcas, aoProdutoCadastrado }) => {
 
     const aoSalvar = (e) => {
         e.preventDefault();
+
         const preco = Number(form["preco"]);
         let flag = true;
 
@@ -42,11 +49,12 @@ const Formulario = ({ secoes, marcas, aoProdutoCadastrado }) => {
         if(flag) {
             form.imagem = getURL(form.marca);
             form.preco = preco.toFixed(2);
+            form.cores = getCores(form.secao);
+
             aoProdutoCadastrado(form);
         } else {
             console.log("Não foi possivel realizar o cadastro");
         }
-
 
         setForm({
             secao: "",

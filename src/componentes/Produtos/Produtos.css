@@ -53,11 +53,6 @@
     transition: 0.2s;
 }
 
-/* ZOOM NO HOVER */
-.produto:hover img {
-    transform: scale(1.1);
-}
-
 /* RODAPÉ */
 .produto .rodape {
     padding: 15px;
